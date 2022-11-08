@@ -1,0 +1,139 @@
+v<html>
+    <head>
+        <title>case Study</title>
+        <style>
+            body{
+                background-color: hsl(154, 100%, 35%);
+            }
+            #form{
+                background-color: white;
+                max-width: 400px;
+                display: block;
+                margin: auto;
+                padding-top: 25px;
+            }
+            #label{
+                padding-left: 20px;
+                font-size: 16px; 
+            }
+            
+
+            #label1, #text1{
+                font-size: 16px;
+                margin-left: 8px 0px;
+                padding-bottom: 10px;
+                margin-top: 8px;
+            }
+             #text1{
+                margin-left:20px;
+
+            }
+            #text {
+                width: 350px;
+                height: 20px;
+                display: inline-block;
+                border: 1px solid rgb(71, 70, 70);
+                border-radius: 4px;
+                margin-left: 20px;
+                margin-bottom: 8px;
+                padding-bottom: 15px;
+                padding-top: 20px;
+                margin-top: 8px;
+                padding-left: 15px;
+                
+            }
+           
+            #select{
+                padding: 7px 125px;
+                margin-left: 20px;
+                border: 1px solid rgb(71, 70, 70);
+                border-radius: 4px;
+                margin-top: 8px;
+            }
+            h3{
+                text-align: center;
+            }
+            #button {
+                margin-bottom: 20px;
+                border: 1px solid;
+                border-radius: 4px;
+                width: 350px;
+                height: 25px;
+                margin-left: 20px;
+                text-align: center;                
+                font-size: 16px;
+                cursor: pointer;
+                background-color: hsl(154, 100%, 35%);
+                
+            }
+            #textarea{
+                padding-left: 20px;
+                
+            }
+            #textarea1{
+                margin-left: 20px;
+                margin-top: 8px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <h3>Anguler Form</h3>
+        <div id="form">
+        <form action="">
+            <label id="label"> Name </label><br>
+           <input type="text" name="name" id="text" placeholder="Enter Your Name" autocomplete="off"><br><br>
+            <label id="label"> Email </label><br>
+           <input type="email" name="name" id="text" placeholder="Enter Your Email" autocomplete="off"><br><br>
+            <label id="label">Age</label><br>
+           <input type="number" name="age" id="text" placeholder="Enter Your Age" autocomplete="off"><br><br>
+            <label id="label">Which option best describes you?</label><br>
+           <select name="describe" id="select">
+                <option value="Intern">Intern</option>
+                <option value="Professional">Professional</option>
+                <option value="Other">Other</option>
+            </select><br><br>
+            <label id="label">Would you recommend Anguler to a friend? </label><br>
+           <input type="radio" name="refer" id="text1" value="yes">
+            <label id="label1">Yes</label><br>
+           <input type="radio" name="refer" id="text1" value="no">
+            <label id="label1">No</label><br>
+           <input type="radio" name="refer" id="text1" value="maybe">
+            <label id="label1">Maybe</label><br><br>
+            <label id="label">Languages and Frameworks known(<span onclick="selects()">Check all that apply</span>)</label><br>
+           <input type="checkbox" name="check" id="text1" value="C">
+            <label id="label1">C</label><br>
+           <input type="checkbox" name="check" id="text1" value="C++">
+            <label id="label1">C++</label><br>
+           <input type="checkbox" name="check" id="text1" value="C#">
+            <label id="label1">C#</label><br>
+           <input type="checkbox" name="check" id="text1" value="Java">
+            <label id="label1">Java</label><br>
+           <input type="checkbox" name="check" id="text1" value="Python">
+            <label id="label1">Python</label><br>
+           <input type="checkbox" name="check" id="text1" value="JavaScript">
+            <label id="label1">JavaScript</label><br>
+           <input type="checkbox" name="check" id="text1" value="React">
+            <label id="label1">React</label><br>
+           <input type="checkbox" name="check" id="text1" value="Anguler">
+            <label id="label1">Anguler</label><br>
+           <input type="checkbox" name="check" id="text1" value="Django">
+            <label id="label1">Django</label><br>
+           <input type="checkbox" name="check" id="text1" value="Spring">
+            <label id="label1">Spring</label><br><br>
+            <label id="label">Any comments or suggestions</label><br>
+           <textarea name="textarea" id="textarea1" cols="45" rows="4"></textarea><br><br>
+           <button type="submit" id="button">Submit</button><br>
+        </form>
+    </div>
+    <script type="text/javascript"> 
+        function selects(){  
+            var ele=document.getElementsByName('check'); 
+            //console.log(ele.length) 
+            for(var i=0; i<ele.length; i++){  
+                    ele[i].checked=true;  
+            } 
+        } 
+        </script>
+    </body>
+</html>
