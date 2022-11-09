@@ -1,0 +1,29 @@
+.button1{
+    background-color: green;
+    width: 1350px;
+    height: 40px;
+    border: 0cm;
+    color: aliceblue;
+
+}
+.button2{
+    background-color: red;
+    width: 1350px;
+    height: 40px;
+    border: 0cm;
+    color: aliceblue;
+}
+.input{
+    background-color: rgb(243, 237, 237);
+    width: 1340px;
+    height: 30px;
+    border: 0cm;
+}
+.heading{
+    font-weight: bold;
+}
+.TP{
+    font-weight: bold;
+    color: blue;
+}
+::-webkit-input-placeholder{color: rgb(166, 167, 157);}
