@@ -1,4 +1,4 @@
-.button1{
+.signup{
     background-color: green;
     width: 1350px;
     height: 40px;
@@ -6,7 +6,7 @@
     color: aliceblue;
 
 }
-.button2{
+.cancel{
     background-color: red;
     width: 1350px;
     height: 40px;
