@@ -1,0 +1,20 @@
+<div class="spinner-border" *ngIf="loading" role="status"></div>
+<div *ngIf="!loading">
+  <div class="row">
+    <ul class="list-group">
+      <span *ngIf="vegList.length == 0"> No Items found.Please add some</span>
+      <li class="list-group-item" *ngFor="let veg of vegList">
+        <strong> {{ veg.name }}</strong>
+        <span class="float-right">
+          <a (click)="onClickNavigateToHome(veg.fType, veg.id)"
+            ><i class="bi bi-pencil-square"></i
+          ></a>
+          <a (click)="onClickDeletefoodItem(veg.id)"
+            ><i class="bi bi-trash spacing"></i
+          ></a>
+        </span>
+      </li>
+    </ul>
+  </div>
+  <app-navigate-to-home></app-navigate-to-home>
+</div>

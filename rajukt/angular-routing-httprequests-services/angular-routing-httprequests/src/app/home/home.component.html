@@ -1,0 +1,64 @@
+<div class="row">
+  <div class="row">
+    <label for="exampleFormControlInput1" class="form-label">Food Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="exampleFormControlInput1"
+      placeholder="Enter food Name here"
+      [(ngModel)]="foodName"
+    />
+  </div>
+  <div class="row">
+    <label for="exampleFormControlInput2" class="form-label">food Type</label>
+    <select
+      class="form-select"
+      [(ngModel)]="foodType"
+      aria-label="Default select example"
+    >
+      <option [value]="-1" [selected]="foodType == '-1'">
+        Select food Type
+      </option>
+      <option [value]="1" [selected]="foodType == '1'">VEG</option>
+      <option [value]="2" [selected]="foodType == '2'">Nov-Veg</option>
+      <option [value]="3" [selected]="foodType == '3'">Desert</option>
+    </select>
+  </div>
+  <div class="row">
+    <label for="exampleFormControlInput2" class="form-label"> </label>
+    <button class="btn btn-primary" (click)="addClickHandler()">
+      {{ btnTitle }}
+    </button>
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <a class="btn btn-link" (click)="onClickVegHandler('veg-component', '1')"
+        >VEG</a
+      >
+    </div>
+    <div class="col-md-4">
+      <a
+        class="btn btn-link"
+        (click)="onClickVegHandler('Nonveg-component', '2')"
+        >NonVeg</a
+      >
+    </div>
+    <div class="col-md-4">
+      <a
+        class="btn btn-link"
+        (click)="onClickVegHandler('Desert-component', '3')"
+        >Deserts</a
+      >
+    </div>
+  </div>
+  <div class="row" *ngIf="showAlert">
+    <div class="alert alert-success" role="alert">
+      <strong>Item {{ successMsg }} succesfully !</strong>
+    </div>
+  </div>
+  <div class="row" *ngIf="showError">
+    <div class="alert alert-danger" role="alert">
+      <strong>Please enter the Data !</strong>
+    </div>
+  </div>
+</div>

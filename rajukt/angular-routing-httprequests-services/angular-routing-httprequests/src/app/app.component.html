@@ -1,0 +1,67 @@
+<div class="container-fluid">
+  <br />
+  <div class="row">
+    <div class="col-4">
+      <div class="list-group" id="list-tab" role="tablist">
+        <a
+          class="list-group-item list-group-item-action"
+          routerLink="/home-component"
+          routerLinkActive="active"
+          id="list-home-list"
+          data-toggle="list"
+          role="tab"
+          aria-controls="home"
+          >Home</a
+        >
+        <a
+          id="list-profile-list"
+          class="list-group-item list-group-item-action"
+          routerLinkActive="active"
+          [routerLink]="['/veg-component', '1']"
+          data-toggle="list"
+          role="tab"
+          aria-controls="profile"
+          >Veg</a
+        >
+        <a
+          class="list-group-item list-group-item-action"
+          routerLinkActive="active"
+          [routerLink]="['/Nonveg-component', '2']"
+          id="list-messages-list"
+          data-toggle="list"
+          role="tab"
+          aria-controls="messages"
+          >Non-Veg</a
+        >
+        <a
+          class="list-group-item list-group-item-action"
+          id="list-settings-list"
+          data-toggle="list"
+          role="tab"
+          aria-controls="settings"
+          [routerLink]="['/Desert-component', '3']"
+          routerLinkActive="active"
+          >Deserts</a
+        >
+      </div>
+    </div>
+
+    <div class="col-1">
+      <div class="d-flex" style="height: 200px">
+        <div class="vr"></div>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="tab-content" id="nav-tabContent">
+        <div
+          class="tab-pane fade show active"
+          id="list-home"
+          role="tabpanel"
+          aria-labelledby="list-home-list"
+        >
+          <router-outlet> </router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
