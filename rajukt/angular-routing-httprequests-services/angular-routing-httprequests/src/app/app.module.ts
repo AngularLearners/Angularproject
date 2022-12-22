@@ -13,6 +13,7 @@ import { AuthService } from './auth.service';
 import { AuthChildGuard } from './auth-child.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { AppRoutingModule } from './app-routing.module';
     NonvegComponent,
     DesrtsComponent,
     NavigateToHomeComponent,
+    LoginComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [AuthService, AuthService],
