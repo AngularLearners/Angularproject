@@ -1,6 +1,0 @@
-[build]
-base="/tree/main/rajukt/angular/demo1"
-publish = "dist/demo1"
-
-  # Default build command.
-  command = "ng build"
