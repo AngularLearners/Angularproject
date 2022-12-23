@@ -1,9 +1,0 @@
-<div class="list-container">
-    <span *ngIf="count >0 && count!=249" style="color: blue;">Total Results-- {{count}}</span>
-
-    <ul *ngFor="let list of resultArray" class="list">
-        <li *ngIf="inputCollect && inputCollect.length>=2">{{list}}</li>
-    </ul>
-    <p *ngIf=" inputCollect && inputCollect.length<=1" class="message">Please enter more than 1 character</p>
-    <p *ngIf=" count == 0  && inputCollect.length>2" class="message">Country not found</p>
-</div>
