@@ -1,6 +1,6 @@
 [build]
-base="/tree/main/rajukt/angular-routing-httprequests-services/angular-routing-httprequests/"
-publish = "dist/angular-routing-httprequests/"
+base="/tree/main/rajukt/angular/demo1"
+publish = "dist/demo1"
 
   # Default build command.
   command = "ng build"
