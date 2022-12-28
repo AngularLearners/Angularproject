@@ -10,6 +10,10 @@ import { DataTransferService } from '../data-transfer.service';
 export class NonvegComponent implements OnInit {
   NonvegList: { name: string; fType: string; id: string }[] = [];
   loading = false;
+  totalCount = 0;
+  pageSize = 2;
+  page = 1;
+
   constructor(
     private dataService: DataTransferService,
     private router: ActivatedRoute,
@@ -39,6 +43,7 @@ export class NonvegComponent implements OnInit {
       .getSpecificfoodList(this.router.snapshot.params['category'])
       .subscribe((response) => {
         this.NonvegList = response;
+        this.totalCount = this.NonvegList.length;
         this.loading = false;
       });
   }

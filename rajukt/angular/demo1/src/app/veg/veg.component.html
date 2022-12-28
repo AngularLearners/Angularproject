@@ -3,7 +3,13 @@
   <div class="row">
     <ul class="list-group">
       <span *ngIf="vegList.length == 0"> No Items found.Please add some</span>
-      <li class="list-group-item" *ngFor="let veg of vegList">
+      <li
+        class="list-group-item"
+        *ngFor="
+          let veg of vegList
+            | slice : (page - 1) * pageSize : (page - 1) * pageSize + pageSize
+        "
+      >
         <strong> {{ veg.name }}</strong>
         <span class="float-right">
           <a (click)="onClickNavigateToHome(veg.fType, veg.id)"
@@ -13,6 +19,14 @@
             ><i class="bi bi-trash spacing"></i
           ></a>
         </span>
+      </li>
+      <li class="list-group-item">
+        <ngb-pagination
+          [pageSize]="pageSize"
+          [collectionSize]="totalCount"
+          [(page)]="page"
+          aria-label="Default pagination"
+        ></ngb-pagination>
       </li>
     </ul>
   </div>
