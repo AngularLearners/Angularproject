@@ -10,6 +10,9 @@ import { DataTransferService } from '../data-transfer.service';
 export class DesrtsComponent implements OnInit {
   desertsList: { name: string; fType: string; id: string }[] = [];
   loading = false;
+  totalCount = 0;
+  pageSize = 2;
+  page = 1;
 
   constructor(
     private dataService: DataTransferService,
@@ -26,6 +29,7 @@ export class DesrtsComponent implements OnInit {
       .getSpecificfoodList(this.router.snapshot.params['category'])
       .subscribe((response) => {
         this.desertsList = response;
+        this.totalCount = this.desertsList.length;
         this.loading = false;
       });
   }

@@ -1,8 +1,14 @@
 <div class="spinner-border" *ngIf="loading" role="status"></div>
 <div class="row" *ngIf="!loading">
   <ul class="list-group">
-    <span *ngIf="NonvegList.length == 0"> No Items found.Please add some</span>
-    <li class="list-group-item" *ngFor="let food of NonvegList">
+    <span *ngIf="desertsList.length == 0"> No Items found.Please add some</span>
+    <li
+      class="list-group-item"
+      *ngFor="
+        let food of desertsList
+          | slice : (page - 1) * pageSize : (page - 1) * pageSize + pageSize
+      "
+    >
       <strong>{{ food.name }}</strong>
       <span class="float-right">
         <a (click)="onClickNavigateToHome(food.fType, food.id)"
@@ -12,6 +18,14 @@
           ><i class="bi bi-trash spacing"></i
         ></a>
       </span>
+    </li>
+    <li class="list-group-item">
+      <ngb-pagination
+        [pageSize]="pageSize"
+        [collectionSize]="totalCount"
+        [(page)]="page"
+        aria-label="Default pagination"
+      ></ngb-pagination>
     </li>
   </ul>
   <app-navigate-to-home></app-navigate-to-home>

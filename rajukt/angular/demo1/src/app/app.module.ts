@@ -14,6 +14,7 @@ import { AuthChildGuard } from './auth-child.service';
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './login/login.component';
+import { NgbPagination } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,13 @@ import { LoginComponent } from './login/login.component';
     NavigateToHomeComponent,
     LoginComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [
+    BrowserModule,
+    NgbPagination,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+  ],
   providers: [AuthService, AuthService],
   bootstrap: [AppComponent],
 })
