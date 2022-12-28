@@ -1,0 +1,20 @@
+<div>
+  <div class="review">
+    <div class="img-container">
+      <img src="{{ review[index].image }}" alt="name" class="person-img" />
+      <span class="quote-icon"> <i class="bi bi-quote"></i></span>
+    </div>
+    <h4 class="author">{{ review[index].name }}</h4>
+    <p class="job">{{ review[index].job }}</p>
+    <p class="info">{{ review[index].text }}</p>
+    <div class="button-container">
+      <button class="prev-btn" (click)="leftClickHandler()">
+        <i class="bi bi-arrow-left-circle"></i>
+      </button>
+      <button class="next-btn" (click)="rightClickHandler()">
+        <i class="bi bi-arrow-right-circle"></i>
+      </button>
+    </div>
+    <button class="random-btn" (click)="randomCheck()">surprise me</button>
+  </div>
+</div>
