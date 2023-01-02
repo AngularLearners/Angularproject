@@ -1,0 +1,21 @@
+<div *ngIf="inputData.length != 0">
+  <div class="heading">
+  <h2>Employee Details</h2>
+</div>
+  <table [ngClass]="employee1">
+    <tr>
+      <th>Code</th>
+      <th>Name</th>
+      <th>Gender</th>
+      <th>Salary</th>
+      <th>DOB</th>
+    </tr>
+    <tr *ngFor="let det of existingEmployeeDetails">
+      <td>{{ det.code }}</td>
+      <td>{{ det.name }}</td>
+      <td>{{ det.gender }}</td>
+      <td>{{ det.salary }}</td>
+      <td>{{ det.dob }}</td>
+    </tr>
+  </table>
+</div>
